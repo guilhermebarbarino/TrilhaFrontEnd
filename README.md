@@ -109,3 +109,9 @@ Aqui estão algumas das principais tags HTML e suas finalidades, juntamente com 
         <input type="submit" value="Enviar">
       </form>
       ```
+
+# II. Explique com suas palavras a importância do HTML Semântico
+
+-  o HTML semântico é fundamental para a acessibilidade, SEO, manutenção do código, consistência visual e compatibilidade futura de um site. Ele melhora a compreensão do conteúdo tanto para humanos quanto para máquinas, o que resulta em uma experiência de usuário melhor e mais eficiente na web. Portanto, é altamente recomendável usar práticas de HTML semântico ao desenvolver páginas da web.
+
+      
