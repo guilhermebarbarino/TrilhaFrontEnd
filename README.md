@@ -143,6 +143,98 @@ Aqui estão algumas das principais tags HTML e suas finalidades, juntamente com 
 
 - Compatibilidade com Navegadores: Verifique se a página funciona corretamente em diferentes navegadores e dispositivos. Isso garante que todos os usuários tenham acesso independente do navegador ou dispositivo que estão usando.
 
+# Explique com suas palavras a importância do CSS
+- o CSS é essencial para a criação de websites funcionais, garantindo uma experiência positiva para os visitantes.
+- Permite o controle total sobre a apresentação de um site.
+- O CSS desempenha um papel fundamental na tornar um site acessível para pessoas com deficiências visuais, ao permitir que os desenvolvedores criem layouts e estilos adaptáveis que funcionem bem com leitores de tela e outras tecnologias assistivas.
+- Com o CSS, é possível criar estilos reutilizáveis e aplicá-los a várias páginas do site.
+- O CSS ajuda a garantir que um site seja exibido de forma consistente em diferentes navegadores e dispositivos.
+- O CSS também influencia indiretamente a otimização de mecanismos de busca.
+
+# Explique a diferença entre class & id
+- As classes são usadas quando você deseja aplicar estilos a vários elementos com características semelhantes, enquanto os IDs são usados quando você precisa estilizar um elemento exclusivo em uma página.
+
+#  Como podemos fazer a inserção do CSS na página?
+**esses são alguns exemplos de inserção**
+- Você pode incluir o código CSS diretamente na seção <style> do cabeçalho (na tag <head>) do seu documento HTML.
+- Você pode criar um arquivo CSS externo com extensão .css e vinculá-lo à sua página HTML usando a tag <link>. Isso é útil quando você deseja reutilizar estilos em várias páginas.
+- Você pode adicionar estilos CSS diretamente a elementos HTML usando o atributo style. Essa abordagem é usada para aplicar estilos específicos a elementos individuais.
+
+# Explique o que é encadeamento e agrupamento de seletores
+- O encadeamento de seletores envolve a combinação de seletores para definir estilos em elementos específicos que atendam a múltiplos critérios.
+- O agrupamento de seletores permite que você aplique os mesmos estilos a múltiplos elementos semelhantes em uma única regra de estilo.
+
+# O que é Box-Model e dê 3 exemplos de aplicação
+- O Box Model é um conceito fundamental em CSS que descreve como os elementos HTML são representados como caixas retangulares na página web.
+**Exemplos de aplicação do Box Model:**
+- Preenchimento (Padding): O preenchimento é uma área transparente ao redor do conteúdo dentro da caixa. Ele cria um espaço entre o conteúdo e a borda da caixa.
+- Borda (Border): A borda é uma linha que circunda o preenchimento e o conteúdo. É usada para destacar visualmente a caixa e separá-la de outros elementos na página.
+- Margem (Margin): A margem é uma área transparente ao redor da borda da caixa. Ela cria um espaço entre a caixa atual e outros elementos na página.
+
+# Explique a diferença entre Margin e Padding
+**a principal diferença entre margem (margin) e preenchimento (padding) está em sua posição e função:**
+- Margem (Margin): Controla o espaço ao redor do elemento, afetando o espaço entre o elemento e outros elementos na página.
+- Preenchimento (Padding): Controla o espaço interno do elemento, afetando o espaço entre o conteúdo do elemento e sua borda interna. Isso influencia diretamente o tamanho do elemento.
+
+# Explique o que é Position e dê um exemplo de cada
+- A propriedade `position` em CSS controla como um elemento HTML é posicionado dentro do layout de uma página web. Existem quatro valores principais para a propriedade `position`, cada um com seu comportamento específico:
+
+1. **`static` (Padrão):**
+   - O valor padrão para a maioria dos elementos.
+   - Os elementos com posição estática são posicionados de acordo com o fluxo normal do documento. Ignora as propriedades `top`, `right`, `bottom` e `left`.
+
+   Exemplo:
+   ```css
+   div {
+       position: static;
+   }
+   ```
+
+2. **`relative`:**
+   - O elemento é posicionado de forma relativa ao seu próprio local no layout normal.
+   - Você pode usar as propriedades `top`, `right`, `bottom` e `left` para mover o elemento em relação à sua posição normal.
+
+   Exemplo:
+   ```css
+   div {
+       position: relative;
+       top: 10px;
+       left: 20px;
+   }
+   ```
+
+3. **`absolute`:**
+   - O elemento é posicionado em relação ao seu ancestral mais próximo que possui uma posição diferente de `static`.
+   - O elemento é removido do fluxo normal do documento.
+   - Você pode usar as propriedades `top`, `right`, `bottom` e `left` para definir sua posição em relação a esse ancestral.
+
+   Exemplo:
+   ```css
+   div {
+       position: absolute;
+       top: 50px;
+       left: 100px;
+   }
+   ```
+
+4. **`fixed`:**
+   - O elemento é posicionado em relação à janela do navegador, independentemente do deslocamento da página.
+   - O elemento não é afetado por rolagens.
+   - Você pode usar as propriedades `top`, `right`, `bottom` e `left` para definir sua posição na janela do navegador.
+
+   Exemplo:
+   ```css
+   div {
+       position: fixed;
+       top: 10px;
+       right: 10px;
+   }
+   ```
+
+
+
+
+
 
 
 
