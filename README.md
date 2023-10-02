@@ -109,6 +109,175 @@ Aqui estão algumas das principais tags HTML e suas finalidades, juntamente com 
         <input type="submit" value="Enviar">
       </form>
       ```
+12. **Main**:
+      - Finalidade: é usada para encapsular o conteúdo principal de uma página web. Ela informa aos navegadores e leitores de tela que o conteúdo dentro dela é a parte mais importante e relevante da página.
+    - Exemplo:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Uso da Tag &lt;main&gt;</title>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Conteúdo Principal</h2>
+        <p>Este é o conteúdo principal da minha página.</p>
+        <p>É aqui que você encontrará as informações mais importantes.</p>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Meu Site</p>
+    </footer>
+</body>
+</html>
+``` 
+ 
+14. **Footer**:
+   - Finalidade:- Finalidade: Define uma tabela para organizar dados em linhas e colunas.
+    - Exemplo:
+```
+      <!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Página com Footer</title>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Bem-vindo ao Meu Site</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+        <p>Entre em contato: <a href="mailto:contato@meusite.com">contato@meusite.com</a></p>
+    </footer>
+</body>
+</html>
+```
+
+16. **Aside**:
+      - Finalidade: -é fornecer informações adicionais que não estão diretamente relacionadas ao conteúdo principal da página, mas ainda são relevantes de alguma forma.
+    - Exemplo: 
+```
+      <!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Elemento &lt;aside&gt;</title>
+</head>
+<body>
+    <header>
+        <h1>Título Principal da Página</h1>
+    </header>
+    
+    <main>
+        <article>
+            <h2>Artigo Principal</h2>
+            <p>Este é o conteúdo principal do artigo...</p>
+        </article>
+    </main>
+
+    <aside>
+        <h2>Informações Adicionais</h2>
+        <p>Este é o conteúdo relacionado ou suplementar que fornece informações adicionais sobre o tópico principal da página. Pode conter links, anúncios, widgets de redes sociais, etc.</p>
+    </aside>
+
+    <footer>
+        <p>Rodapé da Página</p>
+    </footer>
+</body>
+</html>
+ ```
+18. **Article**:
+
+    - Finalidade:  é identificar e isolar uma parte do conteúdo que pode ser considerada como uma unidade completa, como um post de blog, uma notícia, um comentário de usuário, um artigo, uma postagem de fórum ou qualquer outra peça de conteúdo independente.
+    - Exemplo:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Uso do Elemento &lt;article&gt;</title>
+</head>
+<body>
+    <header>
+        <h1>Título da Página</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h2>Título do Artigo</h2>
+        <p>Este é um exemplo de um artigo marcado com o elemento &lt;article&gt; em HTML. Ele contém um título e um parágrafo de texto.</p>
+        <p>Artigos podem conter texto, imagens, vídeos ou qualquer outro tipo de conteúdo relacionado.</p>
+    </article>
+
+    <article>
+        <h2>Outro Artigo</h2>
+        <p>Este é outro exemplo de artigo usando o elemento &lt;article&gt;. Cada artigo é uma unidade independente de conteúdo.</p>
+    </article>
+
+    <footer>
+        <p>&copy; 2023 Exemplo de Uso do Elemento &lt;article&gt;</p>
+    </footer>
+</body>
+</html>
+```
+      
+20. **Header**:
+   - Finalidade: é fornecer contexto e informações de identificação para os visitantes da página.
+   - Exemplo:
+   ```
+     <body>
+    <header>
+        <h1>Meu Site</h1>
+        <p>Bem-vindo ao meu site pessoal.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Conteúdo principal da página aqui -->
+    </main>
+    
+    <footer>
+        <!-- Rodapé da página aqui -->
+    </footer>
+</body>
+```
+      
+      
 # Explique com suas palavras a importância do HTML Semântico
 
 -  o HTML semântico é fundamental para a acessibilidade, SEO, manutenção do código, consistência visual e compatibilidade futura de um site. Ele melhora a compreensão do conteúdo tanto para humanos quanto para máquinas, o que resulta em uma experiência de usuário melhor e mais eficiente na web. Portanto, é altamente recomendável usar práticas de HTML semântico ao desenvolver páginas da web.
