@@ -19,6 +19,10 @@ body {
     height: 50px;
 }
 
+.gray {
+    background-color: gray;
+}
+
 .black {
     background-color: black;
 }
@@ -41,4 +45,3 @@ td {
 .h1 {
     text-align: center;
 }
-
