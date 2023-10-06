@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grid Layout</title>
+
+    <style>
+
+        /* Exemplo a) */
+
+        .grid-container {
+
+            display: grid;
+            background-color: black;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+
+        }
+
+        .grid-item {
+            color: #fff;
+
+        }
+
+        p {
+            margin: 10px 0px 0px 0px;
+        }
+
+        code {
+            background-color: bisque;
+        }
+
+        footer {
+            text-align: center;
+            background-color:crimson;
+            margin: 5px 0px 0px 0px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header><H1>Repostas desafio 3</H1></header>
+    <main>
+        <section>
+            <h2>Explique o que é o Grid Layout</h2>
+            <article>
+                <p> O Grid Layout é um modelo de layout em CSS que permite criar layouts de grade complexos e alinhados em páginas da web. 
+                    Ele oferece um sistema de grade bidimensional, permitindo que você organize elementos em linhas e colunas, criando designs altamente flexíveis e responsivos.
+            </p>
+            <ul class="grid-container">
+                <li class="grid-item">1</li>
+                <li class="grid-item">2</li>
+                <li class="grid-item">3</li>
+            </ul>
+        </article>
+        </section>
+        <section>
+            <h2>Cite e dê exemplos das propriedades do Grid Container</h2>
+            <article>
+                <ul>
+                    <li>
+                        <strong>display : grid </strong>
+                        <p>Define um elemento HTML como um contêiner de grade.</p>
+                        <p> <strong>Exemplo</strong></p>
+                        <code> 
+                            .grid-container {
+        
+                            display: grid }
+
+                        </code>
+                    </li>
+                    <li>
+                        <strong>grid-template-columns e grid-template-rows</strong>
+                        <p>Define o número e o tamanho das colunas e linhas da grade.</p>
+                        <p> <strong>Exemplo</strong></p>
+                        <code>
+                            .grid-container {
+
+                            display: grid;
+                       
+                            grid-template-columns: 1fr 2fr 1fr; 
+                       
+                            grid-template-rows: auto 100px; }
+
+                        </code>
+                    </li>
+                    <li>
+                        <strong>grid-template-areas</strong>
+                        <p>Define áreas nomeadas dentro da grade para facilitar o posicionamento dos elementos filhos.</p>
+                        <p><strong>Exemplo</strong></p>
+                        <code>
+                            .grid-container {
+
+                                display: grid;
+                           
+                                grid-template-areas:
+                           
+                                  "header header"
+                           
+                                  "sidebar main"
+                           
+                                  "footer footer";
+                           
+                              }
+                        </code>
+                    </li>
+                    <li>
+                        <strong>grid-gap</strong>
+                        <p>Define o espaçamento entre as colunas e linhas da grade.</p>
+                        <p><strong>Exemplo</strong></p>
+                        <code>
+                            .grid-container {
+
+                                display: grid;
+                           
+                                grid-gap: 20px; /* Espaçamento de 20 pixels entre as colunas e linhas */
+                           
+                              }
+                        </code>
+                    </li>
+                    <li>
+                        <strong>justify-items e align-items</strong>
+                        <p>Define o alinhamento padrão dos elementos dentro das células da grade.</p>
+                        <p><strong>Exemplo</strong></p>
+                        <code>
+                            .grid-container {
+
+                                display: grid;
+                           
+                                justify-items: center; /* Alinhamento horizontal central */
+                           
+                                align-items: center; /* Alinhamento vertical central */
+                           
+                              }
+                        </code>
+                    </li>
+                    <li>
+                        <strong>grid-auto-columns e grid-auto-rows</strong>
+                        <p>Define o tamanho automático das colunas e linhas quando elementos são adicionados dinamicamente à grade.</p>
+                        <p><strong>Exemplo</strong></p>
+                        <code>
+                            .grid-container {
+
+                                display: grid;
+                           
+                                grid-auto-columns: 100px; /* Colunas com 100px de largura automática */
+                           
+                                grid-auto-rows: 50px; /* Linhas com 50px de altura automática */
+                           
+                              }
+                        </code>
+                    </li>
+                    
+                </ul>
+               
+                
+            </article>
+        </section>
+        <section>
+            <h2>Cite e dê exemplos das propriedades do Grid Item</h2>
+            <article>
+                <ul>
+                    <li>
+                        <strong>grid-colum e grid-row</strong>
+                        <p>Define a posição do item na grade em relação às colunas e linhas.</p>
+                        <p> <strong>Exemplo</strong></p>
+                        <code>
+                            .grid-item {
+
+                                grid-column: 2 / 4; /* Ocupa da coluna 2 à coluna 4 */
+                           
+                                grid-row: 1 / 3; /* Ocupa da linha 1 à linha 3 */
+                           
+                            }
+                        </code>
+                    </li>
+                    <li>
+                        <strong>grid-area</strong>
+                        <p>Especifica em qual área nomeada da grade o item deve ser colocado.</p>
+                        <p> <strong>Exemplo</strong></p>
+                        <code>
+                            .grid-item {
+
+                                grid-area: main-content; /* Coloca o item na área nomeada "main-content" */
+                           
+                              }
+                        </code>
+                    </li>
+                    <li>
+                        <strong>justify-self e align-self</strong>
+                        <p>Define o alinhamento horizontal e vertical do item dentro de sua célula na grade.</p>
+                        <p> <strong>Exemplo</strong></p>
+                        <code>
+                            .grid-item {
+
+                                justify-self: center; /* Alinhamento horizontal central */
+                           
+                                align-self: end; /* Alinhamento vertical no final */
+                           
+                              }
+                        </code>
+                    </li>
+                    <li>
+                        <strong>order</strong>
+                        <p>Controla a ordem de exibição dos itens na grade. Itens com valores menores aparecem primeiro.</p>
+                        <p> <strong>Exemplo</strong></p>
+                        <code>
+                            .grid-item {
+
+                                order: 2; /* Este item aparecerá depois do item com order: 1 */
+                           
+                              }
+                        </code>
+                    </li>
+                    <li>
+                        <strong>grid-column-start, grid-column-end, grid-row-start, grid-row-end</strong>
+                        <p>Define as posições iniciais e finais das colunas e linhas em que um item deve ser colocado.</p>
+                        <p> <strong>Exemplo</strong></p>
+                        <code>
+                            .grid-item {
+
+                                grid-column-start: 2; /* Começa na coluna 2 */
+                           
+                                grid-column-end: 4; /* Termina na coluna 4 */<br>
+                           
+                                grid-row-start: 1; /* Começa na linha 1 */
+                           
+                                grid-row-end: 3; /* Termina na linha 3 */
+                           
+                              }
+                        </code>
+                    </li>
+                    <br>
+                </ul>
+            </article>
+        </section>
+        <section>
+            <h2>O que é a unidade fr</h2>
+            <article>
+                <p>A unidade "fr" em CSS (unidade de fração) é uma unidade de medida relativa usada em layouts de grade (Grid Layout)<br> e em layouts flexíveis (Flexbox). 
+                    Ela representa uma fração do espaço disponível dentro de um contêiner flexível ou de grade.</p>
+                <br>
+                <p><strong>Exemplo</strong></p>
+                <code>
+                    .grid-item {
+
+                        width: 3fr;
+            
+                    } 
+                </code>
+            </article>
+        </section>
+        <section>
+            <h2>O que é a notação repeat</h2>
+            <article>
+                <p>A notação `repeat` é uma funcionalidade do CSS Grid Layout que permite definir padrões repetitivos para as colunas e/ou linhas de uma grade.<br> 
+                    Ela é especialmente útil quando você deseja criar layouts de grade com várias colunas ou linhas que têm a mesma largura ou altura.</p>
+                <br>
+                <p><strong>Exemplo</strong></p>
+                <code>
+                    .grid-container {
+
+                        grid-template-columns: repeat(3, 1fr);
+            
+                    } 
+                </code>
+            </article>
+        </section>
+        <section>
+            <h2>O que são as linhas do Grid</h2>
+            <article>
+                <p>As linhas do grid são os elementos que dividem o grid tanto horizontal quanto verticalmente, <br>
+                    criando células onde você pode colocar conteúdo</p>
+                <br>
+                <p><strong>Exemplo</strong></p>
+                <code>
+                    .grid-container {
+
+                        grid-template-rows: repeat(2, 1fr);
+            
+                    }
+                </code>
+            </article>
+        </section>
+        <section>
+            <h2>O que é uma célula no Grid</h2>
+            <article>
+                <p></p>Uma célula no grid é uma área retangular específica dentro da estrutura do grid.<br> 
+                Ela é formada pela interseção de uma linha de coluna e uma linha de linha no grid.<br> 
+                Essas células são usadas para organizar e posicionar elementos de conteúdo em um layout de grade.</p>
+                <br>
+                <p><strong>Exemplo</strong></p>
+                <code>
+                    .grid-item {
+
+                        grid-column: 2;
+            
+                        grid-row: 1;
+            
+                    }
+                </code>
+            </article>
+        </section>
+        <section>
+            <h2>O que são áreas do Grid</h2>
+            <article>
+                <p>As "áreas" em CSS Grid Layout são regiões nomeadas dentro do contêiner de grade onde você pode posicionar elementos de forma específica.<br> 
+                    Elas são uma maneira conveniente de definir e organizar o layout da grade, permitindo que você atribua nomes a áreas específicas da grade e, em seguida, coloque elementos nessas áreas pelo nome</p>
+                <br>
+                <p><strong>Exemplo</strong></p>
+                <code>
+                    .grid-container {
+
+                        grid-template-areas:
+            
+                            "header header header"
+            
+                            "sidebar main main"
+            
+                            "footer footer footer";
+            
+                    }
+                    <br>
+            
+            
+                    .header { grid-area: header; }
+            
+                    .sidebar { grid-area: sidebar; }
+            
+                    .main { grid-area: main; }
+            
+                    .footer { grid-area: footer; }
+                </code>
+            </article>
+        </section>
+    </main>
+    <footer><small>grid layout</small></footer>
+
+</body>
+
+</html>
