@@ -1,18 +1,11 @@
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
+function changeBgColor(color){
+    const sec = document.querySelector('.sec');
+    sec.style.background = color;
 }
 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-
-
-function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
+function menuToggle(){
+    const toggleMenu = document.querySelector('.toggleMenu');
+    const navigation = document.querySelector('.navigation');
+    toggleMenu.classList.toggle('active');
+    navigation.classList.toggle('active');
 }
