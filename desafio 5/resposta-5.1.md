@@ -79,8 +79,6 @@ O arquivo "package.json" é usado para gerenciar dependências e scripts em proj
 #### VIII. Para que serve o arquivo environment.ts?
 O arquivo "environment.ts" é usado para definir variáveis de ambiente específicas do aplicativo, facilitando a personalização e configuração em diferentes ambientes.
 
-Este documento fornece informações essenciais sobre SPA, MPA e Angular. Para saber mais, consulte a documentação oficial e recursos relacionados.
-
 # Sobre Text Interpolation, Responda.
 
 ## I - O que é?

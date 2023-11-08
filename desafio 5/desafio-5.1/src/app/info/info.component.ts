@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class InfoComponent {
   nome: string = 'Guilherme da silva';
-  nomeGuia: string = 'Bonnano';
+  nomeGuia: string = 'Alexander';
   dataHoje: Date = new Date();
 }

@@ -1,4 +1,7 @@
+import { Router } from '@angular/router';
+
 import { ComponentePaiComponent } from './../componente-pai/componente-pai.component';
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   templateUrl: './componente-filho.component.html',
   styleUrls: ['./componente-filho.component.scss'],
 })
+export class ComponenteFilhoComponent extends ComponentePaiComponent {
+  constructor(private router: Router) {
+    super();
+  }
 
-export class ComponenteFilhoComponent extends ComponentePaiComponent {}
+  irAoCubo() {
+    this.router.navigate(['/cubo'], {
+      queryParams: { x: this.numeroComponent },
+    });
+  }
+}

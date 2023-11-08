@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cubo',
   templateUrl: './cubo.component.html',
-  styleUrls: ['./cubo.component.scss']
+  styleUrls: ['./cubo.component.scss'],
 })
-export class CuboComponent {
-  valor : number =0;
+export class CuboComponent implements OnInit {
+  x: number = 0;
 
-  constructor(private router: Router) {}
+  constructor(private route: ActivatedRoute) {}
 
-
-
+  ngOnInit() {
+    this.route.queryParams.subscribe((params) => {
+      this.x = +params['x'];
+    });
+  }
 }
