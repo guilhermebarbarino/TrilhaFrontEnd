@@ -349,11 +349,7 @@ textarea.input {
     }
 
     .content .imgBox {
-        width: 100%;
-        display: flex;
-        padding-right: 0;
-        margin-top: 50px;
-        justify-content: center;
+        display: none;
     }
 
     .content .imgBox img {
