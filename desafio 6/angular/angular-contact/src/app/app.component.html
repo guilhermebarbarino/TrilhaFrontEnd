@@ -1,0 +1,64 @@
+<header class="sec">
+  <nav>
+    <a href="#"><img src="../../assets/img/logo.jpg" class="logo" alt="Logo da Empresa"></a>
+    <div class="toggleMenu" (click)="menuToggle()" aria-hidden="true" role="button" tabindex="0"></div>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <button class="btnMenu">Sign in</button>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <div class="content">
+      <div class="imgBox">
+        <img src="./../assets/img/fundo.png" class="background" alt="Imagem de fundo do tema do chat">
+      </div>
+    </div>
+    <div class="textBox">
+      <h1>Contact Us</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, architecto perspiciatis debitis autem repellendus
+        eius nam expedita, aliquid distinctio molestiae temporibus, quidem voluptates rerum veniam saepe laboriosam vel
+        quas asperiores.</p>
+
+        
+        <form [formGroup]="formularioContato" (ngSubmit)="enviarFormulario()">
+          <div class="input-container">
+            <input type="text" formControlName="name" placeholder="Username" class="input" />
+            <div *ngIf="formularioContato.get('name').hasError('required') && formularioContato.get('name').touched">
+              Nome é obrigatório!
+            </div>
+          </div>
+        
+          <div class="input-container">
+            <input type="email" formControlName="email" placeholder="email" class="input" />
+            <div *ngIf="formularioContato.get('email').hasError('required') && formularioContato.get('email').touched">
+              Email é obrigatório!
+            </div>
+            <div *ngIf="formularioContato.get('email').hasError('email') && formularioContato.get('email').touched">
+              Email inválido!
+            </div>
+          </div>
+        
+          <div class="input-container">
+            <input type="tel" formControlName="phone" placeholder="phone" class="input" />
+            <div *ngIf="formularioContato.get('phone').hasError('required') && formularioContato.get('phone').touched">
+              Telefone é obrigatório!
+            </div>
+          </div>
+        
+          <div class="input-container textarea">
+            <textarea formControlName="message" class="input" placeholder="Message"></textarea>
+            <div *ngIf="formularioContato.get('message').hasError('required') && formularioContato.get('message').touched">
+              Mensagem é obrigatória!
+            </div>
+          </div>
+        
+          <input type="submit" [disabled]="formularioContato.invalid" value="Start Chat" class="btnChat" />
+        </form>
+    </div>
+  </section>
+</main>
