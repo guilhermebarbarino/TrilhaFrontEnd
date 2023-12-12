@@ -1,0 +1,70 @@
+<div class="container bg-secondary mt-2">
+    <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show mt-6" role="alert">
+        {{ errorMessage }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <button class="btn btn-primary mt-5" (click)="loadAllDigimons()">Carregar Todos os Digimons</button>
+
+    <button class="btn btn-primary mt-5 ms-1 mx-5 border-1" (click)="applyFilter()">Filtrar</button>
+
+    <div class="filter-container">
+        <input type="text" class="form-control mt-3 w-50" placeholder="Nome do Digimon" [(ngModel)]="filterName">
+        <select class="form-control mt-3 w-25" [(ngModel)]="filterLevel">
+            <option value="">Selecione um Nível</option>
+            <option value="Rookie">Rookie</option>
+            <option value="Champion">Champion</option>
+            <option value="Ultimate">Ultimate</option>
+            <option value="Mega">Mega</option>
+            <option value="Fresh">Fresh</option>
+            <option value="Training">Training</option>
+            <option value="Armor">Armor</option>
+        </select>
+    </div>
+
+    <div class="row mt-4">
+
+        <div class="col-md-2 mt-2" *ngFor="let digimon of currentDigimons">
+            <div class="card" (click)="showDigimonDetails(digimon)">
+
+                <div class="card">
+
+                    <img class="card-img-top" [src]="digimon.img" alt="{{ digimon.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ digimon.name }}</h5>
+                        <p class="card-text">{{ digimon.level }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paginação -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item mt-5 me-2" [class.disabled]="currentPage === 1">
+                    <a class="page-link" href="#" (click)="setPage(currentPage - 1)">Anterior</a>
+                </li>
+
+                <li class="page-item mt-5" [class.disabled]="currentPage === pages.length">
+                    <a class="page-link" href="#" (click)="setPage(currentPage + 1)">Próximo</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" #digimonModal tabindex="-1" aria-labelledby="digimonModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="digimonModalLabel">{{ selectedDigimon?.name }}</h5>
+                        <button type="button" class="btn-close" (click)="hideModal()" aria-label="Close"></button>
+
+                    </div>
+                    <div class="modal-body">
+                        <img [src]="selectedDigimon?.img" alt="{{ selectedDigimon?.name }}" class="img-fluid">
+                        <p><strong>Level:</strong> {{ selectedDigimon?.level }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
